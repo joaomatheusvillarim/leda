@@ -11,4 +11,11 @@ Este repositório contém códigos utilizados na disciplina de Laboratório de E
 - Roteiro 7: Tipos Abstratos de Dados (Stack e Queue)
 - Roteiro 8: Lista encadeada recursiva (LinkedList)
 - Roteiro 9 (roteiro curto): Lista encadeada (LinkedList)
+- Roteiro 10: Tabelas Hash (HashTable)
 - Mais em breve..
+
+## Roteiros de revisão
+- Roteiro de revisão 1: Arrays e Interfaces
+- Roteiro de revisão 2: Generics, Collections, Comparable, Comparator
+- Roteiro de revisão 3: JUnit
+- Roteiro de revisão 4: Recursividade
