@@ -6,71 +6,44 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 	protected RecursiveSingleLinkedListImpl<T> next;
 
 	public RecursiveSingleLinkedListImpl() {
+
 	}
+
 
 	@Override
 	public boolean isEmpty() {
-		return this.data == null;
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public int size() {
-		if (this.isEmpty()) {
-			return 0;
-		}
-		return 1 + this.next.size();
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public T search(T element) {
-		T result = null;
-		if (element != null && !this.isEmpty()) {
-			if (this.data.equals(element)) {
-				result = this.data;
-			} else {
-				result = this.next.search(element);
-			}
-		}
-		return result;
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public void insert(T element) {
-		if (element != null) {
-			if (this.isEmpty()) {
-				this.data = element;
-				this.next = new RecursiveSingleLinkedListImpl<T>();
-			} else {
-				this.next.insert(element);
-			}
-		}
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public void remove(T element) {
-		if (element != null && !this.isEmpty()) {
-			if (this.data.equals(element)) {
-				this.data = this.next.getData();
-				this.next = this.next.getNext();
-			} else {
-				this.next.remove(element);
-			}
-		}
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public T[] toArray() {
-		@SuppressWarnings("unchecked")
-		T[] array = (T[]) new Object[this.size()];
-		this.toArray(array, 0);
-		return array;
-	}
-
-	private void toArray(T[] array, int i) {
-		if (!this.isEmpty()) {
-			array[i] = this.data;
-			this.next.toArray(array, i + 1);
-		}
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	public T getData() {

@@ -4,12 +4,8 @@ import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sorting.AbstractSorting;
-import sorting.simpleSorting.BubbleSort;
-import sorting.simpleSorting.InsertionSort;
-import sorting.simpleSorting.SelectionSort;
-import sorting.variationsOfBubblesort.RecursiveBubbleSort;
-import sorting.variationsOfSelectionsort.RecursiveSelectionSort;
+import sorting.*;
+import sorting.variationsOfSelectionsort.*;
 
 public class StudentSortingTest {
 

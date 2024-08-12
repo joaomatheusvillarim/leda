@@ -1,5 +1,7 @@
 package sorting.divideAndConquer.quicksort3;
 
+import static util.Util.swap;
+
 import sorting.AbstractSorting;
 
 /**
@@ -20,7 +22,60 @@ public class QuickSortMedianOfThree<T extends Comparable<T>> extends
 		AbstractSorting<T> {
 
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if (array.length > 1 && leftIndex < rightIndex) {
+
+			int pivotIndex = partition(array, leftIndex, rightIndex);
+			sort(array, leftIndex, pivotIndex - 1);
+			sort(array, pivotIndex + 1, rightIndex);
+
+		}
 	}
+
+	private int partition(T[] array, int leftIndex, int rightIndex) {
+
+		int pivotIndex = getPivotIndex(array, leftIndex, rightIndex);
+		swap(array, leftIndex, pivotIndex);
+
+		T pivot = array[leftIndex];
+		int resp = leftIndex;
+
+		for (int j = resp + 1; j <= rightIndex; j++) {
+
+			//a cada elemento menor que o pivot, o trocamos para o começo
+			//do intervalo e incrementamos resp
+			if (array[j].compareTo(pivot) <= 0) {
+				resp++;
+				swap(array, resp, j);
+
+			}
+		}
+		//por fim trocamos o pivot com o elemento na posição resp
+		swap(array, leftIndex, resp);
+
+		return resp;
+
+	}
+
+	private int getPivotIndex(T[] array, int leftIndex, int rightIndex) {
+
+		int centerIndex = (leftIndex + rightIndex) / 2;
+		int resp = centerIndex;
+		
+		boolean p = array[leftIndex].compareTo(array[centerIndex]) <= 0;
+		boolean q = array[leftIndex].compareTo(array[rightIndex]) <= 0;
+		boolean r = array[centerIndex].compareTo(array[rightIndex]) <= 0;
+
+		if ((p && ! r && q) || (! p && r && ! q)) {
+			resp = rightIndex;
+
+		} else if ((! p && r && q) || (p && ! r && ! q)) {
+			resp = leftIndex;
+		
+		}
+
+		return resp;
+
+	}
+
 }

@@ -7,8 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
-import sorting.linearSorting.CountingSort;
-import sorting.linearSorting.ExtendedCountingSort;
+import sorting.linearSorting.*;
 
 public class StudentSortingTest {
 

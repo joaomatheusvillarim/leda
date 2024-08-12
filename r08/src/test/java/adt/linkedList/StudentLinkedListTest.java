@@ -22,8 +22,9 @@ public class StudentLinkedListTest {
 	}
 
 	private void getImplementations() {
-		lista1 = new SingleLinkedListImpl<Integer>();
-		lista2 = new SingleLinkedListImpl<Integer>();
+		// TODO O aluno deve ajustar aqui para instanciar sua implementação
+		lista1 = null;
+		lista2 = null;
 	}
 
 	@Test
